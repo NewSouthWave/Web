@@ -44,24 +44,48 @@ class ViewController: UIViewController, WKNavigationDelegate{
         myActivityIndicator.isHidden = true
     }
 
-    @IBAction func btnGoUrl(_ sender: Any) {
+    func checkUrl(_ url: String) -> String {
+        var strUrl = url
+        let flag = strUrl.hasPrefix("http://")
+        if !flag {  // http가 붙어있지 않다면 자동으로 추가
+            strUrl = "http://" + strUrl
+        }
+        return strUrl
+    }
+    
+    @IBAction func btnGoUrl(_ sender: UIButton) {   // 텍스트 필드에 적힌 주소로 웹 뷰에 로딩
+        let myUrl = checkUrl(txtUrl.text!)
+        txtUrl.text = ""
+        loadWebPage(myUrl)
     }
     @IBAction func btnGoSite1(_ sender: UIButton) {
+        loadWebPage("https://tension-code.tistory.com/")
     }
     @IBAction func btnGoSite2(_ sender: UIButton) {
+        loadWebPage("https://soundcloud.com/discover")
     }
     @IBAction func btnLoadHtmlString(_ sender: UIButton) {
+        let htmlString = "<h1> HTML String </h1><p> String 변수를 이용한 웹페이지 </p><p><a href=\"http://2sam.net\">2sam</a>으로 이동</p>"   // html문을 변수에 저장
+        myWebView.loadHTMLString(htmlString, baseURL: nil)
     }
-    @IBAction func btnLoadHtmlFile(_ sender: UIButton) {
+    @IBAction func btnLoadHtmlFile(_ sender: UIButton) {    // html 파일이 웹뷰에 나타나도록 함
+        let filePath = Bundle.main.path(forResource: "htmlView", ofType: "html")
+        let myUrl = URL(fileURLWithPath: filePath!)
+        let myRequest = URLRequest(url: myUrl)
+        myWebView.load(myRequest)
     }
     
     @IBAction func btnStop(_ sender: UIBarButtonItem) {
+        myWebView.stopLoading() // 웹페이지 로딩 중지
     }
     @IBAction func btnRefresh(_ sender: UIBarButtonItem) {
+        myWebView.reload()  //웹페이지 재로딩
     }
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
+        myWebView.goBack()  //이전 웹페이지로 이동
     }
     @IBAction func btnGoForward(_ sender: UIBarButtonItem) {
+        myWebView.goForward()   //다음 웹페이지로 이동
     }
     
     

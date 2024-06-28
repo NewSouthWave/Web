@@ -13,6 +13,7 @@
 		3D50DFB72C2E686E00A0AA08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D50DFB52C2E686E00A0AA08 /* Main.storyboard */; };
 		3D50DFB92C2E687000A0AA08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D50DFB82C2E687000A0AA08 /* Assets.xcassets */; };
 		3D50DFBC2C2E687000A0AA08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D50DFBA2C2E687000A0AA08 /* LaunchScreen.storyboard */; };
+		3D50DFC42C2E799800A0AA08 /* htmlView.html in Resources */ = {isa = PBXBuildFile; fileRef = 3D50DFC32C2E799800A0AA08 /* htmlView.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3D50DFB82C2E687000A0AA08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D50DFBB2C2E687000A0AA08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D50DFBD2C2E687000A0AA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D50DFC32C2E799800A0AA08 /* htmlView.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = htmlView.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				3D50DFAF2C2E686E00A0AA08 /* AppDelegate.swift */,
 				3D50DFB12C2E686E00A0AA08 /* SceneDelegate.swift */,
 				3D50DFB32C2E686E00A0AA08 /* ViewController.swift */,
+				3D50DFC32C2E799800A0AA08 /* htmlView.html */,
 				3D50DFB52C2E686E00A0AA08 /* Main.storyboard */,
 				3D50DFB82C2E687000A0AA08 /* Assets.xcassets */,
 				3D50DFBA2C2E687000A0AA08 /* LaunchScreen.storyboard */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D50DFC42C2E799800A0AA08 /* htmlView.html in Resources */,
 				3D50DFBC2C2E687000A0AA08 /* LaunchScreen.storyboard in Resources */,
 				3D50DFB92C2E687000A0AA08 /* Assets.xcassets in Resources */,
 				3D50DFB72C2E686E00A0AA08 /* Main.storyboard in Resources */,
