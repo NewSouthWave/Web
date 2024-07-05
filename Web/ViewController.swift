@@ -15,9 +15,9 @@ class ViewController: UIViewController, WKNavigationDelegate{
     
     // 시작할 때 지정 웹페이지 보여주기
     func loadWebPage(_ url: String){
-        let myUrl = URL(string: url)
-        let myRequest = URLRequest(url: myUrl!)
-        myWebView.load(myRequest)
+        let myUrl = URL(string: url)    // url 값으 받아 URL형으로 상수 선언
+        let myRequest = URLRequest(url: myUrl!) // URLRequest형 상수 선언
+        myWebView.load(myRequest)   // myWebView 클래스의 load 메서드 호출
     }
     
     override func viewDidLoad() {
@@ -45,8 +45,8 @@ class ViewController: UIViewController, WKNavigationDelegate{
     }
 
     func checkUrl(_ url: String) -> String {
-        var strUrl = url
-        let flag = strUrl.hasPrefix("http://")
+        var strUrl = url    // 입력받은 url 저장
+        let flag = strUrl.hasPrefix("http://")  // 'http://' 를 가지고 있는지 확인한 값을 flag에 넣는다
         if !flag {  // http가 붙어있지 않다면 자동으로 추가
             strUrl = "http://" + strUrl
         }
